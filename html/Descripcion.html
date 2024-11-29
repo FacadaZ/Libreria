@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Libro</title>
+    <link rel="stylesheet" href="/css/Descripcion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="/Index.html">
+                    <img src="/image/Logo2.png" alt="Logo" class="logo">
+                </a>
+                <h1>Detalle de Libro</h1>
+            </div>
+            <div class="Login-Cart">
+                <a href="/html/Login.html"><span>Login</span><i class="fas fa-circle-user"></i></a>
+                <a href="/html/Carrito.html"><span>Carrito</span><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Descripción</h1>
+        <section class="libro-detalle" id="libro-detalle">
+            <div class="portada">
+                <img id="libro-imagen" src="" alt="Portada del libro">
+                <p class="price" id="libro-precio"><strong>Precio: </strong></p>
+                <p class="stock" id="libro-stock"><strong>Stock: </strong></p>
+            </div>
+            <div class="libro-info">
+                <p><strong>Libro:</strong> <span id="libro-nombre"></span></p>
+                <p><strong>Autor:</strong> <span id="libro-autor"></span></p>
+                <p><strong>Año de publicación:</strong> <span id="libro-ano"></span></p>
+                <p><strong>Categoría:</strong> <span id="libro-categoria"></span></p>
+                <p><strong>Sinopsis:</strong> <span id="libro-sinopsis"></span></p>
+            </div>
+        </section>
+
+        <section class="opciones-compra">
+            <label for="cantidad">En stock:</label>
+            <select id="cantidad">
+            </select>
+
+            <div class="buttons">
+                <button class="btn seguir-compra">Seguir comprando</button>
+                <button class="btn add-carrito">Agregar al carrito</button>
+            </div>
+        </section>
+    </main>
+    <script src="/js/descripcion.js"></script>
+</body>
+
+</html>

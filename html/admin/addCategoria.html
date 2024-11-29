@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin</title>
+    <link rel="stylesheet" href="/css/admin/addCategoria.css">
+</head>
+<body>
+    <div class="header">
+        <a href="/Index.html">
+            <img src="/image/Logo2.png" alt="Logo" class="logo">
+        </a>
+        <h1>Categoría</h1>
+    </div>
+    <div class="container">
+        <div class="form-section">
+            <form id="categoriaForm">
+                <label for="categoria">Nombre de categoría</label>
+                <input type="text" id="inputNombreCategoria" placeholder="Ingrese categoría">
+                <div id="validation-nombreCategoria" style="display:none; color:red;">El nombre de la categoría es obligatorio</div>
+                <button type="submit">Agregar categoría</button>
+                <button type="button" id="guardarCategoria" style="display:none;">Guardar</button>
+            </form>
+            <br>
+            <div id="msg-error-categoria" style="display:none; color:red;"></div>
+            <br>
+            <div id="msg-success-categoria" style="display:none; color:green;">Categoría agregada exitosamente</div>
+        </div>
+
+        <div class="list-section">
+            <h2>Lista de categorías</h2>
+            <div id="category-list">
+                
+            </div>
+        </div>
+    </div>
+    <script src="/js/addCategoria.js"></script>
+</body>
+</html>

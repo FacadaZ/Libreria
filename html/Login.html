@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="container">
+
+        <img src="/image/Logo.png" alt="User" class="Logo">
+        <div class="login">
+            <form id="loginForm">
+                <div class="inputDatos">
+                    <label for="User">Usuario</label>
+                    <input type="text" id="inputUsername" placeholder="usuario" required>
+                </div>
+                <div class="inputDatos">
+                    <label for="Password">Contraseña</label>
+                    <input type="password" id="inputPassword" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" id="btn-login" class="btnLogin">Login</button>
+                <a href="/html/Registrar.html" class="ref-login">Aun no tienes cuenta? <span class="underline">Registrarse</span></a>
+                <a href="/html/RecuperarPass.html" class="ref-login">Olvidaste tu contraseña? <span class="underline">Recuperar</span></a>
+
+                <div id="validation-username" style="display:none; color:red;">El nombre de usuario es requerido</div>
+                <div id="validation-password" style="display:none; color:red;">La contraseña es requerida</div>
+                <div id="msg-error-login" style="display:none; color:red;">Usuario y/o Contraseña son inválidos</div>
+            </form>
+        </div>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+</html>

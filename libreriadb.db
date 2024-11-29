@@ -1,0 +1,100 @@
+-- Usar la base de datos
+USE Libreria;
+
+-- Tabla de Usuarios
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_usuario VARCHAR(50) NOT NULL UNIQUE,
+    nombre_completo VARCHAR(255) NOT NULL UNIQUE,
+    contraseña VARCHAR(255) NOT NULL,
+    rol ENUM('administrador', 'cliente') DEFAULT 'cliente',
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabla de Categorías
+CREATE TABLE categorias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL UNIQUE
+);
+
+-- Tabla de Productos
+CREATE TABLE productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    año INT, 
+    sinopsis TEXT,
+    precio DECIMAL(10, 2) NOT NULL,
+    cantidad INT NOT NULL,
+    categoria_id INT, -- Relación con categorías
+    visualizaciones INT DEFAULT 0, -- Para "Más buscados"
+    imagen_url VARCHAR(255), -- Almacena la URL o ruta de la imagen
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE SET NULL
+);
+
+-- Tabla de Carritos de Compras
+CREATE TABLE carritos_compras (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+-- Tabla de Items del Carrito de Compras
+CREATE TABLE items_carrito (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    carrito_id INT NOT NULL,
+    producto_id INT NOT NULL,
+    cantidad INT NOT NULL DEFAULT 1,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (carrito_id) REFERENCES carritos_compras(id) ON DELETE CASCADE,
+    FOREIGN KEY (producto_id) REFERENCES productos(id) ON DELETE CASCADE
+);
+
+-- Tabla de Pedidos
+CREATE TABLE pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    total DECIMAL(10, 2) NOT NULL,
+    direccion_envio VARCHAR(255),
+    estado_pedido ENUM('pendiente', 'completado', 'cancelado') DEFAULT 'pendiente',
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+-- Tabla de Detalles de Pedido
+CREATE TABLE detalles_pedido (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pedido_id INT NOT NULL,
+    producto_id INT NOT NULL,
+    cantidad INT NOT NULL,
+    precio_unitario DECIMAL(10, 2) NOT NULL,
+    subtotal DECIMAL(10, 2) NOT NULL, -- Calculado en la aplicación
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(id) ON DELETE CASCADE,
+    FOREIGN KEY (producto_id) REFERENCES productos(id) ON DELETE CASCADE
+);
+
+
+select * from carritos_compras;
+select * from usuarios;
+
+
+SELECT * FROM usuarios WHERE nombre_usuario = 'pepito' AND contraseña = 'pepito';
+
+
+
+
+
+DELETE FROM usuarios;
+
+
+
+
+
+
+
+
+
+
+

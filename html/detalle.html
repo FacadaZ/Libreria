@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pedido</title>
+    <link rel="stylesheet" href="/css/detalle.css">
+</head>
+<body>
+    <div class="header">
+        <a href="/Index.html">
+            <img src="/image/Logo2.png" alt="Logo" class="logo">
+        </a>
+        Finalizar Compra
+    </div>
+
+    <div class="container">
+        <div class="direccion">
+            <h3>Dirección de Envío</h3>
+            <input type="text" placeholder="Ingresa tu dirección">
+            <button class="btn-finalizar" id="btn-confirmar-compra">Finalizar Compra</button>
+        </div>
+
+        <div class="resumen">
+            <h3>Resumen del Pedido</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="detalle-compra-container">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">Total a Pagar</th>
+                        <th id="detalle-compra-total">0 BS</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div id="detalles-pedido">
+            <h3>Detalles del Pedido</h3>
+        </div>
+        <form id="formComprobante" enctype="multipart/form-data">
+            <input type="file" id="comprobante" name="comprobante" accept="image/*" >
+            <input type="hidden" id="pedidoId" name="pedidoId" value="123">
+        </form>
+    </div>
+    
+    <script src="/js/detalle.js"></script>
+</body>
+</html>

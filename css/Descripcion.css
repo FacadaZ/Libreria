@@ -1,0 +1,184 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #00aaff;
+    padding: 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 50px;
+}
+
+
+main {
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.libro-detalle {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.libro-info {
+    background-color: #5d5d5d;
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+.libro-info p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.opciones-compra {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.seguir-compra {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.add-carrito {
+    background-color: #000000;
+    color: #fff;
+}
+
+.Login-Cart {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 1.2rem; 
+}
+
+.Login-Cart a {
+    color: #000; 
+    margin-right: 15px; 
+    text-decoration: none;
+}
+
+.Login-Cart i {
+    margin-left: 5px; 
+    color: #000; 
+}
+.portada p strong {
+    font-size: 25px;
+}
+
+
+@media screen and (max-width: 412px) {
+    header {
+        background-color: #39667c;
+        padding: 1rem;
+    }
+    .libro-detalle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .libro-info {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .opciones-compra {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .buttons .btn {
+        width: 100%; 
+    }
+    .Login-Cart a {
+        color: #ffffff; 
+        margin-right: 15px; 
+        text-decoration: none;
+    }
+    
+    .Login-Cart i {
+        margin-left: 5px; 
+        color: #ffffff; 
+    }
+
+
+}
+@media screen and (min-width: 413px) and (max-width: 721px) {
+    header {
+        background-color: #714add;
+        padding: 1rem;
+    }
+    .libro-detalle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .libro-info {
+        max-width: 100%;
+        text-align: center;
+    }
+    .Login-Cart a {
+        color: #ffffff; 
+        margin-right: 15px; 
+        text-decoration: none;
+    }
+    
+    .Login-Cart i {
+        margin-left: 5px; 
+        color: #ffffff; 
+    }
+    
+}

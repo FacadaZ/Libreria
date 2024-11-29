@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #6BA3BE;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0C969C;
+    padding: 15px 20px;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #274D60;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px; 
+    height: 200px;
+    margin: 0 auto;
+}
+
+.card .placeholder {
+    background-color: #ddd;
+    height: 170px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.logo {
+    width: 50px;
+}
+
+@media screen and (max-width: 412px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card .placeholder {
+        height: 80px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .user-icon {
+        font-size: 20px;
+    }
+    .card .placeholder {
+        background-color: #ddd;
+        height: 170px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (min-width: 413px) and (max-width: 721px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card .placeholder {
+        height: 90px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .user-icon {
+        font-size: 22px;
+    }
+    .card .placeholder {
+        background-color: #ddd;
+        height: 170px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

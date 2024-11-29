@@ -1,0 +1,165 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #00aaff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 10px; 
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo h1 {
+    color: #000;
+    margin-left: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#carrito-container {
+    background-color: #c7c7c7;
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 20px 20px; 
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px; 
+}
+
+.producto img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.producto p {
+    margin: 0;
+    padding: 0 10px;
+    flex: 1;
+}
+
+.producto button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #ff1a1a;
+}
+
+#carrito-total {
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#btn-comprar-container {
+    text-align: right;
+    margin: 20px;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-comprar{
+    background-color: #000000;
+    color: #ffffff;
+}
+.seguir-compra {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
+@media screen and (max-width: 412px) {
+    .producto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .producto img {
+        width: 100%;
+        height: auto;
+    }
+
+    .producto p {
+        padding: 10px 0;
+    }
+
+    .producto button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (min-width: 413px) and (max-width: 721px) {
+    .producto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .producto img {
+        width: 100%;
+        height: auto;
+    }
+
+    .producto p {
+        padding: 10px 0;
+    }
+
+    .producto button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+
+}

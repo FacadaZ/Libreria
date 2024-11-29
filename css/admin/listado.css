@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #0C969C;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.list-section {
+    margin-bottom: 20px;
+}
+
+.list-section h2 {
+    margin-bottom: 10px;
+}
+.btn-aprobar {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-aprobar:hover {
+    background-color: #218838;
+}
+
+.estado-pendiente {
+    color: red;
+}
+
+.estado-completado {
+    color: green;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.zoom {
+    transition: transform 0.2s; 
+    cursor: pointer;
+}
+
+.zoomed {
+    transform: scale(5);
+    z-index: 1000; 
+    position: relative;
+}

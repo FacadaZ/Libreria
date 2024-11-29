@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="/css/RecuperarPass.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/image/Logo.png" alt="User" class="Logo">
+        <div class="Recuperar">
+            <form id="recoverForm">
+                <div class="inputDatos">
+                    <label for="nombre_usuario">Correo</label>
+                    <input type="email" id="inputNombreUsuario" placeholder="Correo Electrónico" >
+                </div>
+                <button type="submit" id="btn-send-code" class="btnRecuperar">Enviar Código</button>
+                <a href="/html/Login.html" class="ref-recuperar">¿Ya tienes cuenta? <span class="underline">Login</span></a>
+                <div id="validation-nombre_usuario" style="display:none; color:red;">El correo electrónico es requerido</div>
+                <div id="msg-error-recover" style="display:none; color:red;">Error al enviar el código</div>
+                <div id="msg-success-recover" style="display:none; color:green;">Correo de recuperación enviado</div>
+            </form>
+
+            <form id="verifyForm" style="display:none;">
+                <div class="inputDatos">
+                    <label for="token">Código de Verificación</label>
+                    <input type="text" id="inputToken" placeholder="Código de Verificación" >
+                </div>
+                <button type="submit" id="btn-verify-code" class="btnVerificar">Verificar Código</button>
+                <a href="#" id="resendCode" class="ref-recuperar">Solicitar un codigo nuevamente</a>
+                <div id="validation-token" style="display:none; color:red;">El código de verificación es requerido</div>
+                <div id="msg-error-verify" style="display:none; color:red;">Error al verificar el código</div>
+                <div id="msg-success-verify" style="display:none; color:green;">Código verificado correctamente</div>
+            </form>
+
+            <form id="resetForm" style="display:none;">
+                <div class="inputDatos">
+                    <label for="newPassword">Nueva Contraseña</label>
+                    <input type="password" id="inputNewPassword" placeholder="Nueva Contraseña" >
+                </div>
+                <button type="submit" id="btn-reset-password" class="btnRestablecer">Restablecer Contraseña</button>
+                <div id="validation-reset" style="display:none; color:red;">La nueva contraseña es requerida</div>
+                <div id="msg-error-reset" style="display:none; color:red;">Error al restablecer la contraseña</div>
+                <div id="msg-success-reset" style="display:none; color:green;">Contraseña actualizada correctamente</div>
+            </form>
+        </div>
+    </div>
+    <script src="/js/recuperar.js"></script>
+</body>
+</html>

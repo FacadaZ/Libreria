@@ -1,0 +1,95 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2FB489;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Logo {
+    width: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.login {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    text-align: center;
+    width: 350px;
+    
+}
+
+.inputDatos {
+    margin-bottom: 1.2rem;
+}
+
+.inputDatos label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.btnLogin {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.ref-login {
+    display: block;
+    margin-top: 1rem;
+    color: #858585;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 412px) {
+    body {
+        background-color: #2FB489;
+    }
+    .btnLogin {
+        background-color: #da5656;
+    }
+    .login {
+        background-color: #FFFFFF;
+        padding: 2rem;
+        text-align: center;
+        width: 250px;
+    }
+    
+    
+}
+@media screen and (min-width: 413px) and (max-width: 721px) {
+    body {
+        background-color: #2FB489;
+    }
+    .btnLogin {
+        background-color: #00aaff;
+    }
+}

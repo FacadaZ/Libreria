@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.search-container {
+    flex-grow: 1; 
+    margin: 0 15px; 
+}
+
+.search {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.Login-Cart {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 1.2rem; 
+}
+
+.Login-Cart a {
+    color: #000; 
+    margin-right: 15px; 
+    text-decoration: none;
+}
+
+.Login-Cart i {
+    margin-left: 5px; 
+    color: #000; 
+}
+
+nav {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    padding: 20px;
+}
+
+.categoria {
+    margin-bottom: 40px;
+}
+
+.categoria h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.items {
+    display: grid;
+    grid-template-columns:repeat(6, 1fr);
+    gap: 20px;
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.item p {
+    margin: 5px 0;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+.item a {
+    text-decoration: none;
+    color: #000;
+}
+.btn-logout {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn-admin {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 412px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-right: 10px;
+    }
+
+    .search-container {
+        flex-grow: 1;
+        margin: 0 10px;
+    }
+
+    .search {
+        width: 100%;
+        padding: 15px; 
+        font-size: 1.5rem; 
+        border-radius: 5px; 
+        border: 1px solid #000000; 
+    }
+
+    .Login-Cart {
+        display: flex;
+        align-items: center;
+    }
+
+    .Login-Cart a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+
+    .Login-Cart a span {
+        display: none; 
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: auto auto; 
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-items: center; 
+    }
+    
+    nav ul li {
+        margin: 0;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 413px) and (max-width: 721px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logo-search-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        margin-right: 10px; 
+    }
+
+    .search-container {
+        flex-grow: 1;
+        margin: 0 10px;
+    }
+
+    .search {
+        width: 100%;
+        padding: 15px; 
+        font-size: 1.5rem; 
+        border-radius: 5px; 
+        border: 1px solid #000000;
+    }
+
+    .Login-Cart {
+        display: flex;
+        align-items: center;
+    }
+
+    .Login-Cart a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: auto auto; 
+        gap: 10px; 
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-items: center; 
+    }
+    
+    nav ul li {
+        margin: 0;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="/css/Registrar.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/image/Logo.png" alt="User" class="Logo">
+        <div class="Registrar">
+            <form id="registerForm">
+                <div class="inputDatos">
+                    <label for="fullname">Nombre Completo</label>
+                    <input type="text" id="inputFullname" placeholder="Nombre Completo" >
+                </div>
+                <div class="inputDatos">
+                    <label for="User">Usuario</label>
+                    <input type="text" id="inputUsername" placeholder="Usuario" >
+                </div>
+                <div class="inputDatos">
+                    <label for="Password">Contraseña</label>
+                    <input type="password" id="inputPassword" placeholder="Contraseña" >
+                </div>
+                <button type="submit" id="btn-register" class="btnRegistrar">Registrar</button>
+                <a href="/html/Login.html" class="ref-registrar">¿Ya tienes cuenta? <span class="underline">Login</span></a>
+                <div id="validation-fullname" style="display:none; color:red;">El nombre completo es requerido</div>
+                <div id="validation-username" style="display:none; color:red;">El nombre de usuario es requerido</div>
+                <div id="validation-password" style="display:none; color:red;">La contraseña es requerida</div>
+                <div id="msg-error-register" style="display:none; color:red;">Error al registrar el usuario</div>
+                <div id="msg-success-register" style="display:none; color:green;"></div>
+            </form>
+        </div>
+    </div>
+    <script src="/js/registrar.js"></script>
+</body>
+</html>
